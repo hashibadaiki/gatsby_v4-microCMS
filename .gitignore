@@ -8,7 +8,6 @@
 logs
 **/*.backup.*
 **/*.back.*
-.cache/*
 
 node_modules
 bower_components
@@ -20,3 +19,6 @@ thumb
 sketch
 
 # End of https://www.toptal.com/developers/gitignore/api/react
+
+.cache/*
+public/*
