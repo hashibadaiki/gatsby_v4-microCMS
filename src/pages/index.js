@@ -9,11 +9,11 @@ const wrapper = css`
 `;
 
 const IndexPage = ({ data }) => {
-  console.log(data);
+  console.log('index', data);
   return (
     <Layout>
       <div css={wrapper}>
-        <BlogList data={data} />
+        <BlogList data={data.allMicrocmsBlog.nodes} />
       </div>
     </Layout>
   );
@@ -21,9 +21,12 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   {
-    allMicrocmsBlog {
+    allMicrocmsBlog(sort: { fields: createdAt, order: DESC }) {
       nodes {
         title
+        id
+        createdAt(formatString: "Y年M月D日")
+        body
       }
     }
   }

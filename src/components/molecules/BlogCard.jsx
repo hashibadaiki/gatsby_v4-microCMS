@@ -1,9 +1,11 @@
 import react from 'react';
 
 export const BlogCard = ({ data }) => {
+  console.log('card', data);
+
   return (
     <div>
-      <div>Molecule</div>
+      <div>{data.title}</div>
     </div>
   );
 };
