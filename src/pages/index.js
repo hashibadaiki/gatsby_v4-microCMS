@@ -2,6 +2,7 @@ import react from 'react';
 import { Template } from '../components/templates/Template';
 import { css } from '@emotion/react';
 import { graphql } from 'gatsby';
+import { Layout } from '../components/templates/Layout';
 
 const sampleStyle = css`
   width: 100%;
@@ -11,10 +12,10 @@ const sampleStyle = css`
 const IndexPage = ({ data }) => {
   console.log(data);
   return (
-    <div>
+    <Layout>
       <div css={sampleStyle}>App</div>
       <Template />
-    </div>
+    </Layout>
   );
 };
 
