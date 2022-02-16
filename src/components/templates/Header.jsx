@@ -1,10 +1,16 @@
+import { css } from '@emotion/react';
 import react from 'react';
-import { Molecule } from '../molecules/Molecule';
+
+const header = css`
+  position: sticky;
+  background-color: #aaaaaa;
+  height: 80px;
+`;
 
 export const Header = () => {
   return (
-    <header>
-      <ul>test</ul>
+    <header css={header}>
+      <div>GatsbyV4 & mincroCMS</div>
     </header>
   );
 };
